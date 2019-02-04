@@ -1,5 +1,4 @@
 #include<iostream>
-#include<stdlib.h>
 
 using namespace std;
 
@@ -15,6 +14,8 @@ class Stack{
     Stack(){
         top = -1;
     }
+    
+    ~Stack();
 
     int topPosition();
     void display();
