@@ -32,14 +32,15 @@ int main() {
 
 void printf(int * array, int size) {
     for (int i = 0; i < size; i++) {
-        cout << "[ " << i << "]" << array[i] << endl;
+        cout << "[" << i << "]" << array[i] << endl;
     }
 }
 
 void quickSort(int * array, int low, int high) {
+    // cout<<"quicksort"<<endl;
     if (low < high) {
         int p = partition(array, low, high);
-			if (p > 1) {
+if (p > 1) {
 				quickSort(array, low, p - 1);
 			}
 			if (p + 1 < high)
@@ -54,6 +55,7 @@ void quickSort(int * array, int low, int high) {
 //goes into infinte loop 
 
 int partition(int * array, int low, int high) {
+    // cout<<"parition"<<endl;
 
 		int pivot = array[low];
 		while (true)
@@ -82,6 +84,9 @@ int partition(int * array, int low, int high) {
 				return high;
 			}
 
+
+
+		}
 }
 
 /*
